@@ -105,14 +105,15 @@ def add_post():
         flash('A maximum of 20 tags is allowed.')
         return redirect(url_for('add'))
 
-    # Handle photo uploads (up to 5)
+    # Handle photo uploads (up to 1)
     photos = request.files.getlist('photos')
-    photo_filenames = []
     
-    if len(photos) > 5:
-        flash('You can upload a maximum of 5 photos.')
+    if len(photos) > 1:
+        flash('You can upload a maximum of 1 photo.')
         return redirect(url_for('add'))
 
+    photo_filenames = []
+    
     for photo in photos:
         if photo and allowed_file(photo.filename):
             photo_filename = secure_filename(photo.filename)

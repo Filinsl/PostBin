@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "content": "<p>ssssss</p>",
+        "tags": [
+            "ssss"
+        ],
+        "date": "2024-10-26T22:57:42.569857",
+        "photos": [
+            "25dd98ab91786c9b04f0178b7f70cdd8.gif",
+            "38c4e7cf72dd9f673aff77c1a2097192.gif",
+            "54e00d34f2eefd58798d055090ce49e4.gif",
+            "xhrYwDs.gif"
+        ]
+    },
+    {
+        "id": 2,
+        "content": "<p>import logging</p><p>from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup</p><p>from telegram.ext import Updater, CommandHandler, CallbackContext</p><p><br></p><p># Включаем логирование</p><p>logging.basicConfig(</p><p>&nbsp;&nbsp;format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO</p><p>)</p><p>logger = logging.getLogger(__name__)</p><p><br></p><p># Токен вашего бота</p><p>TOKEN = '7442663671:AAHCxt8booz0VRszB1Y1AAUlJt0Mm0HgHcs'</p><p><br></p><p>def start(update: Update, context: CallbackContext) -&gt; None:</p><p>&nbsp;&nbsp;chat_id = update.message.chat_id</p><p>&nbsp;&nbsp;# Текст сообщения</p><p>&nbsp;&nbsp;message_text = \"\"\"\\</p><p>ПРИВЕТСТВУЕМ</p><p><br></p><p>Добро пожаловать в наш онлайн-магазин одежды в Telegram! 🛍️</p><p><br></p><p>Вы попали в самое уютное и стильное место, где вас ждут эксклюзивные коллекции одежды по самым выгодным ценам. Мы тщательно отбираем каждую вещь, чтобы вы могли выглядеть и чувствовать себя безупречно.</p><p><br></p><p>Наши преимущества:</p><p><br></p><p>💎 Новинки недели - будьте первыми, кто оценит свежие модели!</p><p>🔥 Горячие скидки и распродажи круглый год - экономьте до 50%!</p><p>🌟 Редкая одежда и аксессуары, эксклюзивно в нашем магазине</p><p>✨ Быстрая бесплатная доставка по всей России - получите свой заказ в кратчайшие сроки!</p><p>🎁 Подарки и бонусы для постоянных покупателей - приятные сюрпризы гарантированы!</p><p><br></p><p>Заходите к нам почаще, ведь у нас всегда найдется что-то особенное для вашего гардероба. Добро пожаловать в мир стиля и комфорта вместе с нами! 🤗</p><p><br></p><p>Цены для подписчиков ниже от -10% чем на маркетплейсах&nbsp;</p><p>При полной предоплате заказа ☝️</p><p><br></p><p>🎁 ГАРАНТИРОВАННЫЙ ПОДАРОК К ПЕРВОМУ ЗАКАЗУ\"\"\"</p><p><br></p><p>&nbsp;&nbsp;# Кнопка с ссылкой</p><p>&nbsp;&nbsp;keyboard = [</p><p>&nbsp;&nbsp;&nbsp;&nbsp;[InlineKeyboardButton(\"Перейти\", url=\"https://t.me/locstore\")]</p><p>&nbsp;&nbsp;]</p><p>&nbsp;&nbsp;reply_markup = InlineKeyboardMarkup(keyboard)</p><p><br></p><p>&nbsp;&nbsp;# Прямая ссылка на изображение</p><p>&nbsp;&nbsp;photo_url = 'https://i.ibb.co/p1YMNzH/9399c0df-d61e-459a-8334-d4523d933144.jpg'</p><p><br></p><p>&nbsp;&nbsp;try:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;# Отправка сообщения с фотографией и кнопкой</p><p>&nbsp;&nbsp;&nbsp;&nbsp;context.bot.send_photo(chat_id=chat_id, photo=photo_url, caption=message_text, reply_markup=reply_markup)</p><p>&nbsp;&nbsp;except Exception as e:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;logger.error(f\"Error sending photo: {e}\")</p><p><br></p><p>def main() -&gt; None:</p><p>&nbsp;&nbsp;updater = Updater(TOKEN)</p><p><br></p><p>&nbsp;&nbsp;dispatcher = updater.dispatcher</p><p>&nbsp;&nbsp;dispatcher.add_handler(CommandHandler(\"start\", start))</p><p><br></p><p>&nbsp;&nbsp;try:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;updater.start_polling()</p><p>&nbsp;&nbsp;&nbsp;&nbsp;updater.idle()</p><p>&nbsp;&nbsp;except Exception as e:</p><p>&nbsp;&nbsp;&nbsp;&nbsp;logger.error(f\"Error starting the bot: {e}\")</p><p><br></p><p>if __name__ == '__main__':</p><p>&nbsp;&nbsp;main()</p>",
+        "tags": [
+            "sssss"
+        ],
+        "date": "2024-10-26T22:59:33.150592",
+        "photos": [
+            "54e00d34f2eefd58798d055090ce49e4.gif",
+            "6948e26479f22f17df897358e5ab9435.gif",
+            "48046d1c2bbde05304cf36182b90d7ec.gif",
+            "83540b2757a6787beb8157b6868c468e.gif",
+            "1703879119_kalix-club-p-el-loulait-art-foni-pinterest-5.png"
+        ]
+    }
+]

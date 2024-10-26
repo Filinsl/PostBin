@@ -44,7 +44,7 @@
     <!-- List of posts -->
     <h2 class="mt-4">Posts</h2>
     <div id="postsList">
-        {% for post in posts %}
+        {% for post in posts|reverse %}
             <div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ post.content | safe | truncate(100, True, '...') }}</h5>

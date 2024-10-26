@@ -51,8 +51,9 @@
             <input type="text" class="form-control" id="tags" name="tags" required>
         </div>
         <div class="mb-3">
-            <label for="photo" class="form-label">Upload photos (up to 5, optional)</label>
-            <input type="file" class="form-control" id="photo" name="photos" accept="image/*" multiple>
+            <label for="photo" class="form-label">Upload photo (optional)</label>
+        
+            <input type="file" class="form-control" id="photo" name="photos" accept="image/*">
         </div>
         <button type="submit" class="btn btn-primary">Add Post</button>
     </form>
@@ -63,15 +64,14 @@
 <!-- Quill JS -->
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script>
-    // Инициализация редактора Quill
+   
     var quill = new Quill('#editor', {
         theme: 'snow'
     });
 
-    // Перед отправкой формы сохраняем содержимое редактора в скрытое поле
     document.getElementById('postForm').onsubmit = function() {
         var content = document.querySelector('input[name=content]');
-        content.value = quill.root.innerHTML; // Получаем HTML содержимое редактора
+        content.value = quill.root.innerHTML; 
     };
 </script>
 </body>
